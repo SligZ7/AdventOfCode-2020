@@ -4,10 +4,10 @@ import { start } from 'repl';
 const inputArray = filereader('input.txt').map(Number);
 
 const solve = () => {
-    let sum, startPointer = 0;
-    let endPointer = inputArray.length - 1;
     inputArray.sort((a, b) => a - b);
 
+    let sum, startPointer = 0;
+    let endPointer = inputArray.length - 1;
     // part 1 - O(n * log(n)) time
     while (startPointer < endPointer) {
         sum = inputArray[startPointer] + inputArray[endPointer];
@@ -21,7 +21,8 @@ const solve = () => {
         }
     }
 
-    
+    sum = 0, startPointer = 0;
+    endPointer = inputArray.length - 1;
     // part 2 - O(n^2*log(n)) time
     while (startPointer < endPointer && sum !== 2020) {
         for (let thirdPointer = startPointer + 1; thirdPointer < endPointer; thirdPointer++) {
