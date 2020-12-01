@@ -8,7 +8,6 @@ const solve = () => {
     // TODO: add your solution here
     let totalSum = 0;
     inputArray.map((num) => {
-        console.log(totalSum);
         totalSum += Math.floor(num / 3) - 2;
     });
 
