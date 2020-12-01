@@ -1,4 +1,4 @@
-import { readFileSync, promises } from 'fs';
+import { readFileSync } from 'fs';
 
 const filereader = (filePath) => {
     try {

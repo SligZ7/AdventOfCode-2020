@@ -1,14 +1,13 @@
 import filereader from '../utils/filereader.js';
-import { start } from 'repl';
 
 const inputArray = filereader('input.txt').map(Number);
 
 const solve = () => {
     inputArray.sort((a, b) => a - b);
 
+     // part 1 - O(n * log(n)) time including the sort
     let sum, startPointer = 0;
     let endPointer = inputArray.length - 1;
-    // part 1 - O(n * log(n)) time
     while (startPointer < endPointer) {
         sum = inputArray[startPointer] + inputArray[endPointer];
         if (sum === 2020) {
@@ -23,7 +22,7 @@ const solve = () => {
 
     sum = 0, startPointer = 0;
     endPointer = inputArray.length - 1;
-    // part 2 - O(n^2*log(n)) time
+    // part 2 - O(n^2*log(n)) time including the sort
     while (startPointer < endPointer && sum !== 2020) {
         for (let thirdPointer = startPointer + 1; thirdPointer < endPointer; thirdPointer++) {
             sum = inputArray[startPointer] + inputArray[endPointer] + inputArray[thirdPointer];
