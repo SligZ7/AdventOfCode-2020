@@ -1,6 +1,6 @@
 # AdventOfCode-2020
 
-I will be using javascript...Figure it might teach me a thing or two for my work at Olive...I'll get more adventurous next year. Feel free to fork this repo if you are planning to use javascript. I will just copy the day-num folder everyday before I begin work.
+I will be using javascript...Figure it might teach me a thing or two for my work...I'll get more adventurous next year. Feel free to fork this repo if you are planning to use javascript. I will just copy the day-num folder everyday before I begin work.
 
 ### Dependencies:
 [NodeJS LTS](https://nodejs.org/en/download)
