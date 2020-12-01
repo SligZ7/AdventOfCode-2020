@@ -21,7 +21,7 @@ const solve = () => {
         }
     }
 
-    // part 2 - O(n^2*log(n)) time including the sort
+    // part 2 - O(n^2) time including the sort
     sum = 0, startPointer = 0;
     endPointer = inputArray.length - 1;
     while (startPointer < endPointer && sum !== 2020) {
