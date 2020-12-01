@@ -8,10 +8,26 @@ const solve = () => {
     let endPointer = inputArray.length - 1;
     inputArray.sort((a, b) => a - b);
 
+    //part 1
+    while (startPointer < endPointer) {
+        sum = inputArray[startPointer] + inputArray[endPointer];
+        if (sum === 2020) {
+            console.log('part 1 sol', inputArray[startPointer]*inputArray[endPointer]);
+            break;
+        } else if (sum > 2020) {
+            endPointer--;
+        } else {
+            startPointer++;
+        }
+    }
+
+
+    //part 2
     while (startPointer < endPointer && sum !== 2020) {
         for (let thirdPointer = startPointer + 1; thirdPointer < endPointer; thirdPointer++) {
             sum = inputArray[startPointer] + inputArray[endPointer] + inputArray[thirdPointer];
             if (sum === 2020) {
+                console.log('part 2 sol', inputArray[startPointer]*inputArray[endPointer]*inputArray[thirdPointer] );
                 break;
             }
         }
