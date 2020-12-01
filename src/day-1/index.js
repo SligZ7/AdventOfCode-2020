@@ -8,7 +8,7 @@ const solve = () => {
     let endPointer = inputArray.length - 1;
     inputArray.sort((a, b) => a - b);
 
-    //part 1
+    // part 1 - O(n * log(n)) time
     while (startPointer < endPointer) {
         sum = inputArray[startPointer] + inputArray[endPointer];
         if (sum === 2020) {
@@ -21,8 +21,8 @@ const solve = () => {
         }
     }
 
-
-    //part 2
+    
+    // part 2 - O(n^2*log(n)) time
     while (startPointer < endPointer && sum !== 2020) {
         for (let thirdPointer = startPointer + 1; thirdPointer < endPointer; thirdPointer++) {
             sum = inputArray[startPointer] + inputArray[endPointer] + inputArray[thirdPointer];
