@@ -6,13 +6,13 @@ const solve = () => {
     // Tim sort o(n * log(n))
     inputArray.sort((a, b) => a - b);
 
-     // part 1 - O(n * log(n)) time including the sort
+    // part 1 - O(n * log(n)) time including the sort
     let sum, startPointer = 0;
     let endPointer = inputArray.length - 1;
     while (startPointer < endPointer) {
         sum = inputArray[startPointer] + inputArray[endPointer];
         if (sum === 2020) {
-            console.log('part 1 sol', inputArray[startPointer]*inputArray[endPointer]);
+            console.log('part 1 sol', inputArray[startPointer] * inputArray[endPointer]);
             break;
         } else if (sum > 2020) {
             endPointer--;
@@ -28,7 +28,7 @@ const solve = () => {
         for (let thirdPointer = startPointer + 1; thirdPointer < endPointer; thirdPointer++) {
             sum = inputArray[startPointer] + inputArray[endPointer] + inputArray[thirdPointer];
             if (sum === 2020) {
-                console.log('part 2 sol', inputArray[startPointer]*inputArray[endPointer]*inputArray[thirdPointer]);
+                console.log('part 2 sol', inputArray[startPointer] * inputArray[endPointer] * inputArray[thirdPointer]);
                 break;
             }
         }
